@@ -187,7 +187,7 @@ class Permissions(BaseFlags):
         permissions set to ``True``.
         """
         # Some of these are 0 because we don't want to set unnecessary bits
-        return cls(0b0000_0000_0000_0010_1111_1111_1111_1111_1111_1111_1111_1111_1111_1111_1111_1111)
+        return cls(0b0000_0000_0000_0110_0111_1111_1111_1111_1111_1111_1111_1111_1111_1111_1111_1111)
 
     @classmethod
     def _timeout_mask(cls) -> int:
@@ -362,6 +362,16 @@ class Permissions(BaseFlags):
         .. versionadded:: 2.0
         """
         return cls(0b0000_0000_0000_0000_0000_0001_0000_0100_0111_0000_0000_0000_0010_0000_0011_1110)
+
+    @classmethod
+    def apps(cls) -> Self:
+        """A factory method that creates a :class:`Permissions` with all
+        "Apps" permissions from the official Discord UI set to ``True``.
+
+
+        .. versionadded:: 2.6
+        """
+        return cls(0b0000_0000_0000_0100_0000_0000_1000_0000_1000_0000_0000_0000_0000_0000_0000_0000)
 
     @classmethod
     def events(cls) -> Self:

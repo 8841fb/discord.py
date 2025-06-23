@@ -28,6 +28,22 @@ InteractionResponse
 .. autoclass:: InteractionResponse()
     :members:
 
+InteractionCallbackResponse
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. attributetable:: InteractionCallbackResponse
+
+.. autoclass:: InteractionCallbackResponse()
+    :members:
+
+InteractionCallbackActivityInstance
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. attributetable:: InteractionCallbackActivityInstance
+
+.. autoclass:: InteractionCallbackActivityInstance()
+    :members:
+
 InteractionMessage
 ~~~~~~~~~~~~~~~~~~~
 
@@ -312,6 +328,10 @@ Enumerations
     .. attribute:: mentionable_select
 
         Represents a select in which both users and roles can be selected.
+
+    .. attribute:: channel_select
+
+        Represents a channel select component.
 
 .. class:: ButtonStyle
 
@@ -872,9 +892,6 @@ Exceptions
 .. autoexception:: discord.app_commands.CommandNotFound
     :members:
 
-.. autoexception:: discord.app_commands.MissingApplicationID
-    :members:
-
 .. autoexception:: discord.app_commands.CommandSyncFailure
     :members:
 
@@ -899,7 +916,7 @@ Exception Hierarchy
             - :exc:`~discord.app_commands.CommandAlreadyRegistered`
             - :exc:`~discord.app_commands.CommandSignatureMismatch`
             - :exc:`~discord.app_commands.CommandNotFound`
-            - :exc:`~discord.app_commands.MissingApplicationID`
+            - :exc:`~discord.MissingApplicationID`
             - :exc:`~discord.app_commands.CommandSyncFailure`
         - :exc:`~discord.HTTPException`
             - :exc:`~discord.app_commands.CommandSyncFailure`
